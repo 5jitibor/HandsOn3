@@ -1,6 +1,7 @@
 package es.usj.androidapps.handson3
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_a.*
@@ -15,6 +16,15 @@ class C : AppCompatActivity() {
             startActivity(intent)
         }
         btnMakeCall.setOnClickListener {
+            val uri = Uri.parse("tel:+34567989091")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
+
+        }
+        btnSendEmail.setOnClickListener {
+            val uri = Uri.parse("tel:+34567989091")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
 
         }
     }

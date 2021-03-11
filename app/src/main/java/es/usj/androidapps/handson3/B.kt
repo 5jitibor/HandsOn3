@@ -1,5 +1,6 @@
 package es.usj.androidapps.handson3
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,5 +23,10 @@ class B : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode==Activity.RESULT_OK){
+            tvResult.text= data?.extras?.get("NAME").toString()
+        }
+
+
     }
 }
